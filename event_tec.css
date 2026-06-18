@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e1e2f;
+    font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+    background: #2a2a40;
+    padding: 40px 60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    .card.activo {
+    background: #4f8cff;
+    transform: scale(1.03);
+    }
+
+    #resultado {
+    color: #f0f0f5;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+    }
