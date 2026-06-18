@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    
+        #button:hover {
+            transform: scale(1.2);
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<div class="button"><button id="button">Pasa el mouse</button></div>
+
+    <script>
+        
+        const boton = document.getElementById('button');
+
+        boton.addEventListener('mouseleave', () => {
+            const colorAleatorio = '#' + Math.floor(Math.random()*16777215).toString(16);
+            boton.style.backgroundColor = colorAleatorio;
+        });
+
+    </script>
+
+</body>
+</html>
