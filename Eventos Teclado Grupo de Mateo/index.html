@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos teclado</title> 
+    <style>
+
+        body {
+            background-color: lightblue;
+            font-family: arial;
+            font-size: 20px;
+            }
+        hr {
+            border: solid 2px; 
+            color: rgb(10, 28, 78);
+            margin-left: -100px;
+            margin-right: -100px;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+
+    
+    <h1>Evento KeyUp</h1>
+
+    <p>Escribí algo:</p>
+
+    <input type="text" id="texto">
+
+    <p id="mensaje">Todavía no escribiste nada.</p>
+    <hr>
+
+<!--------------------------------------------------------------------------------------------->
+
+    <h1>Evento KeyDown</h1>
+
+    <p>Escribí algo:</p>
+
+    <form>
+    <input id="down" placeholder="Haga clic aquí, luego presione una tecla." size="40" />
+    <p id="log"></p>
+    </form>
+
+    <hr>
+<!--------------------------------------------------------------------------------------------->
+
+    <h1>Evento KeyPress</h1>
+
+    <p>Escribí algo:</p>
+    <div id="mensaje1"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
