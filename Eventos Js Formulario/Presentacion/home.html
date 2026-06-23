@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación tipos de eventos JS FORMS</title>
+    <script src="onSubmit.js"></script>
+    <script src="onReset.js"></script>
+    <script src="onChange.js"></script>
+    <script src="onSelect.js"></script>
+    <script src="onInput.js"></script>
+    <script src="onFocus.js"></script>
+    <script src="onBlur.js"></script>
+</head>
+<body>
+
+    <!-- onSubmit
+
+    <form onsubmit="return validarEvento()">
+        <label>Nombre</label>
+        <input type="text" id="nombreEvento">
+        <input type="submit" value="Publicar">
+    </form>
+    -->
+
+    <!-- onReset
+
+    <form onreset="return confirmarBorrado()">
+        <label>Nombre</label>
+        <input type="reset" value="Limpiar">
+        <input type="text">
+    </form>
+    -->
+
+    <!-- onChange
+
+    <form>
+        <select onchange="mostrarTipo(this.value)">
+            <option></option>
+            <option>Carnaval</option>
+            <option>Matineé</option>
+            <option>Feria</option>
+        </select>
+    </form>
+    -->
+
+    <!-- onInput
+
+    <form>
+        <label>Ingrese algo a buscar:</label>
+        <br>
+        <input type="text" oninput="buscar(this.value)">
+        <p id="resultado"></p>
+    </form>
+    -->
+
+    <!-- onFocus
+
+    <form>
+        <label>Ingrese una descripción del evento:</label>
+        <br>
+        <input type="text">
+        <button type="button" onfocus="ayuda()">
+            Ayuda
+        </button>
+    </form>
+    -->
+
+    <!-- onBlur
+
+    <form>
+        <label>Ingrese su correo</label>
+        <input type="text" id="correo" onblur="validarCorreo()">
+    </form>
+    -->
+
+    <!-- onSelect
+
+    <form>
+        <input type="text" value="Carnaval Juan Lacaze" onselect="seleccionado()">
+    </form>
+    -->
+</body>
+</html>
