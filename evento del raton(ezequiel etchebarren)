@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Eventos del Mouse Visual</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+
+  #caja {
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    margin: 100px auto;
+    transition: 0.3s;
+    user-select: none;
+  }
+
+  /* Índice lateral */
+  .panel {
+    position: fixed;
+    top: 20px;
+    width: 180px;
+    padding: 10px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+  }
+
+  #izq { left: 10px; }
+  #der { right: 10px; }
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .color {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    border: 1px solid #fff;
+  }
+</style>
+</head>
+<body>
+
+<!-- Índice izquierda -->
+<div id="izq" class="panel">
+  <b>Eventos</b>
+  <div class="item"><div class="color" style="background:green"></div>Click</div>
+  <div class="item"><div class="color" style="background:yellow"></div>Mouse Over</div>
+  <div class="item"><div class="color" style="background:red"></div>Mouse Down</div>
+  <div class="item"><div class="color" style="background:black"></div>Click Derecho</div>
+</div>
+
+<!-- Índice derecha -->
+<div id="der" class="panel">
+  <b>Otros</b>
+  <div class="item"><div class="color" style="background:orange"></div>Enter (borde)</div>
+  <div class="item"><div class="color" style="background:lightblue"></div>Leave</div>
+  <div class="item">Wheel (rotación)</div>
+</div>
+
+<div id="caja">Probá todos los eventos</div>
+
+<script>
+let elemento = document.getElementById("caja");
+
+// click
+elemento.onclick = function() {
+  elemento.style.backgroundColor = "green";
+}
+
+// doble click
+elemento.ondblclick = function() {
+  elemento.style.transform = "scale(1.2)";
+}
+
+// mouse over
+elemento.onmouseover = function() {
+  elemento.style.backgroundColor = "yellow";
+}
+
+// mouse out
+elemento.onmouseout = function() {
+  elemento.style.backgroundColor = "lightblue";
+  elemento.style.transform = "scale(1)";
+}
+
+// mouse down
+elemento.onmousedown = function() {
+  elemento.style.backgroundColor = "red";
+}
+
+// mouse up
+elemento.onmouseup = function() {
+  elemento.style.backgroundColor = "blue";
+}
+
+// mouse move
+elemento.onmousemove = function(e) {
+  
+}
+
+// click derecho
+elemento.oncontextmenu = function(e) {
+  e.preventDefault();
+  elemento.style.backgroundColor = "black";
+  elemento.style.color = "white";
+}
+
+// mouse enter
+elemento.addEventListener("mouseenter", function() {
+  elemento.style.border = "5px solid orange";
+});
+
+// mouse leave
+elemento.onmouseleave = function() {
+  elemento.style.border = "none";
+  elemento.style.color = "black";
+}
+
+// rueda
+elemento.onwheel = function() {
+  elemento.style.transform = "rotate(10deg)";
+}
+</script>
+
+</body>
+</html>
